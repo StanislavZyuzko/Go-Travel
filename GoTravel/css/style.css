@@ -884,11 +884,12 @@ header {
 
 .modal--m .modal__dialog {
   width: 600px;
-  -webkit-transition: 0.1s;
-  -o-transition: 0.1s;
-  transition: 0.1s;
+  -webkit-transition: 0.8s;
+  -o-transition: 0.8s;
+  transition: 0.8s;
   -webkit-transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
           transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+  visibility: hidden;
 }
 
 .modal--active {
@@ -899,9 +900,7 @@ header {
 .modal--active.modal--m .modal__dialog {
   -webkit-transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
           transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
-  -webkit-transition: 0.8s;
-  -o-transition: 0.8s;
-  transition: 0.8s;
+  visibility: visible;
 }
 
 .modal__dialog {
