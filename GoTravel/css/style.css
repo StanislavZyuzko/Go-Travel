@@ -1699,6 +1699,6 @@ header {
 
 @media (max-heigh: 450px) {
   .modal__dialog-body .modal__video {
-    min-height: 70vh;
+    height: 80vh;
   }
 }
