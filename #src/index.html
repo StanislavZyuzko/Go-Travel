@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
    <meta charset="UTF-8" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,6 +9,7 @@
    <link rel="shortcut icon" href="favicon.ico" />
    <title>Go travel!</title>
 </head>
+
 <body>
    <div class="wrapper">
       <div class="gradient-outer">
@@ -24,7 +26,7 @@
                      explore the beauty of god's earth in a beautiful forest
                      and have fun
                   </p>
-                  <button href="#modal-1" class="main-inner__btn modal__open" data-video-url="videos/forest.mp4"
+                  <button href="#modal-3" class="main-inner__btn modal__open" data-video-url="videos/forest.mp4"
                      id="video-open">
                      Explore Now
                   </button>
@@ -151,32 +153,8 @@
             </div>
          </div>
       </section>
-      <div class="modal modal--m modal--video" id="modal-1">
-         <div class="modal__dialog modal__dialog--video">
-            <div class="modal__dialog-header">
-               <div class="modal__dialog-header-content"></div>
-               <button class="modal__close modal__close--video modal__close--icon">
-                  <span>&times;</span>
-               </button>
-            </div>
-            <div class="modal__dialog-body">
-               <div>
-                  <div class="modal__video">
-                     <video muted autoplay controls loop preload="metadata">
-                        <source type="video/webm" src="videos/forest.webm" />
-                        <source type="video/mp4" src="videos/forest.mp4" />
-                     </video>
-                  </div>
-               </div>
-               <div class="modal__dialog-footer">
-                  <button class="modal__close modal__close--video modal__close--button">
-                     Close
-                  </button>
-               </div>
-            </div>
-         </div>
-      </div>
-      <div class="modal modal--s modal--sign-up" id="modal-2">
+
+      <div class="modal modal--s modal--sign-up" id="modal-1">
          <div class="modal__dialog">
             <div class="modal__dialog-header">
                <div class="modal__dialog-header-content"></div>
@@ -221,7 +199,7 @@
             </div>
          </div>
       </div>
-      <div class="modal modal--s modal--login" id="modal-3">
+      <div class="modal modal--s modal--login" id="modal-2">
          <div class="modal__dialog">
             <div class="modal__dialog-header">
                <div class="modal__dialog-header-content"></div>
@@ -254,6 +232,31 @@
                      <span class="psw">Forgot <a href="#">password?</a></span>
                   </div>
                </form>
+            </div>
+         </div>
+      </div>
+      <div class="modal modal--m modal--video" id="modal-3">
+         <div class="modal__dialog modal__dialog--video">
+            <div class="modal__dialog-header">
+               <div class="modal__dialog-header-content"></div>
+               <button class="modal__close modal__close--video modal__close--icon">
+                  <span>&times;</span>
+               </button>
+            </div>
+            <div class="modal__dialog-body">
+               <div>
+                  <div class="modal__video">
+                     <video muted autoplay controls loop preload="metadata">
+                        <source type="video/webm" src="videos/forest.webm" />
+                        <source type="video/mp4" src="videos/forest.mp4" />
+                     </video>
+                  </div>
+               </div>
+               <div class="modal__dialog-footer">
+                  <button class="modal__close modal__close--video modal__close--button">
+                     Close
+                  </button>
+               </div>
             </div>
          </div>
       </div>
