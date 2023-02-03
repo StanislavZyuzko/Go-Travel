@@ -1457,7 +1457,7 @@ header {
     -webkit-box-pack: end;
         -ms-flex-pack: end;
             justify-content: end;
-    padding-left: 150px;
+    padding-left: 160px;
   }
 
   .burger {
