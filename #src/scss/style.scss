@@ -1067,7 +1067,7 @@ header {
             aspect-ratio: 16 / 9;
             min-height: 40vh;
             @media (max-heigh: 450px) {
-               height: 80vh;
+               height: 120vh;
             }
             & video {
                object-fit: cover;
