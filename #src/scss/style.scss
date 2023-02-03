@@ -369,7 +369,7 @@ header {
    @media (max-width: 820px) {
       margin-right: 0px;
       margin-bottom: 20px;
-      padding-left: 350px;
+      padding-left: 150px;
    }
    position: relative;
    &:last-child {
@@ -423,6 +423,8 @@ header {
    @media (max-width: 820px) {
       display: flex;
       justify-content: end;
+      padding-left: 150px;
+
    }
 }
 
