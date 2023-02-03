@@ -1010,7 +1010,6 @@ header {
       width: 600px;
       transition: 0.8s;
       transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
-      visibility: hidden;
 
    }
    &--active {
@@ -1021,7 +1020,6 @@ header {
       }
       &.modal--m .modal__dialog {
          transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
-         visibility: visible;
 
       }
    }
@@ -1066,7 +1064,7 @@ header {
          & .modal__video {
             position: relative;
             aspect-ratio: 16 / 9;
-            min-height: 40vh;
+            // min-height: 40vh;
             & video {
                object-fit: cover;
                position: absolute;
