@@ -1436,7 +1436,7 @@ header {
   .header-menu__link {
     margin-right: 0px;
     margin-bottom: 20px;
-    margin-left: 150px;
+    padding-left: 150px;
   }
 
   .header__login-inner {
