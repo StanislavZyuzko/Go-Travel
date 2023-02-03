@@ -967,6 +967,7 @@ header {
 .modal__dialog-body .modal__video {
   position: relative;
   aspect-ratio: 16/9;
+  min-height: 30vh;
 }
 
 .modal__dialog-body .modal__video video {
