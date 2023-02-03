@@ -344,7 +344,7 @@ header {
       height: 100%;
       z-index: 500;
       overflow: auto;
-      padding-left: 150%!important;
+      padding-left: 20vh!important;
       &--visible {
          transform: translateX(0%);
          transition: transform 0.5s ease-in-out;
