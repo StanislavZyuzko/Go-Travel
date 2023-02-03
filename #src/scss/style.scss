@@ -1028,6 +1028,7 @@ header {
       overflow: hidden;
       &--video {
          background-color: transparent;
+         min-height: 40vh;
       }
       background-color: #fff;
       display: flex;
@@ -1063,12 +1064,10 @@ header {
          flex-grow: 1;
          overflow: auto;
          & .modal__video {
-            position: relative;
+            position: relative;            
             aspect-ratio: 16 / 9;
-            min-height: 40vh;
-            @media (max-heigh: 450px) {
-               height: 120vh;
-            }
+            // min-height: 40vh;
+           
             & video {
                object-fit: cover;
                position: absolute;

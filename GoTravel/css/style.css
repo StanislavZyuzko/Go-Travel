@@ -917,6 +917,7 @@ header {
 
 .modal__dialog--video {
   background-color: transparent;
+  min-height: 40vh;
 }
 
 .modal__dialog-header {
@@ -967,7 +968,6 @@ header {
 .modal__dialog-body .modal__video {
   position: relative;
   aspect-ratio: 16/9;
-  min-height: 40vh;
 }
 
 .modal__dialog-body .modal__video video {
@@ -1694,11 +1694,5 @@ header {
     font-size: 15px;
     margin-bottom: 12px;
     margin-right: 10px;
-  }
-}
-
-@media (max-heigh: 450px) {
-  .modal__dialog-body .modal__video {
-    height: 120vh;
   }
 }
