@@ -1384,6 +1384,11 @@ header {
         -ms-flex-pack: end;
             justify-content: end;
     margin-top: 30px;
+    padding-left: 150px;
+  }
+
+  .header__column--right {
+    padding-left: 150px;
   }
 
   .header__slogan {
