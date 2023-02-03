@@ -1065,7 +1065,7 @@ header {
          & .modal__video {
             position: relative;            
             aspect-ratio: 16 / 9;
-            min-height: 80vh;           
+            min-height: 40vh;           
             & video {
                object-fit: cover;
                position: absolute;
