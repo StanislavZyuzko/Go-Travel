@@ -1412,7 +1412,7 @@ header {
     height: 100%;
     z-index: 500;
     overflow: auto;
-    padding-left: 60% !important;
+    padding-left: 70% !important;
   }
 
   .header__menu-body--visible {
