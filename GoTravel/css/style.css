@@ -1393,7 +1393,7 @@ header {
   }
 
   .header__menu-body {
-    padding-right: 0 15px;
+    padding: 0 20px;
     display: block;
     -webkit-transform: translateX(100%);
         -ms-transform: translateX(100%);
