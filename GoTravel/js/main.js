@@ -136,9 +136,9 @@ function OpenVideoModal(htmlId, htmlDataAttr) {
   });
 }
 
-// document.addEventListener('DOMContentLoaded', () => {
-//   OpenVideoModal('video-open', 'data-video-url');
-// });
+document.addEventListener('DOMContentLoaded', () => {
+  OpenVideoModal('video-open', 'data-video-url');
+});
 ;
 const imageSlider = new Swiper('.swiper', {
   navigation: {
