@@ -78,3 +78,9 @@ document.addEventListener('DOMContentLoaded', (event) => {
   event.preventDefault();
   OpenVideoModal('video-open', 'data-video-url');
 });
+
+window.onload = function(event) { 
+ 
+  event.preventDefault();
+  
+};
