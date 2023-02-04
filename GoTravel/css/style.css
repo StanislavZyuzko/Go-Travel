@@ -99,7 +99,6 @@ h6 {
 body {
   background-color: #e5e5e5;
   color: #0f1f1c;
-  -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 
 .wrapper {
