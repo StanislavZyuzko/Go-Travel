@@ -670,6 +670,10 @@ header {
           transform: rotate(180deg);
 }
 
+.customers {
+  color: white;
+}
+
 .customers__container {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -765,6 +765,10 @@ header {
 
 // Customers
 
+.customers {
+   color: white;
+}
+
 .customers__container {
    display: flex;
    @media (max-width: 670px) {
