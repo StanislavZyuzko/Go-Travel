@@ -1009,12 +1009,10 @@ header {
    opacity: 0;
    transition: 0.8s;
    overflow: auto;
-   &--m &__dialog {
-      visibility: hidden;
-      opacity: 0;
+   &--m &__dialog {      
       width: 600px;
       transition: 0.8s;
-      transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+      transform: perspective(600px) translate(0px, -300%) rotateX(45deg);
    }
    &--active {
       visibility: visible;
@@ -1022,9 +1020,7 @@ header {
       @media (max-width: 820px) {
          z-index: 2500;
       }
-      &.modal--m .modal__dialog {
-         visibility: visible;
-      opacity: 1;
+      &.modal--m .modal__dialog {        
          transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
       }
    }
