@@ -765,10 +765,6 @@ header {
 
 // Customers
 
-.customers {
-   background-color: white;
-}
-
 .customers__container {
    display: flex;
    @media (max-width: 670px) {
@@ -934,7 +930,6 @@ header {
    }
    @media (max-width: 670px) {
       margin: -10px 0 10px;
-
    }
    @media (max-width: 600px) {
       font-size: 30px;
@@ -1015,7 +1010,7 @@ header {
    opacity: 0;
    transition: 0.8s;
    overflow: auto;
-   &--m &__dialog {      
+   &--m &__dialog {
       width: 600px;
       transition: 0.8s;
       transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
@@ -1026,7 +1021,7 @@ header {
       @media (max-width: 820px) {
          z-index: 2500;
       }
-      &.modal--m .modal__dialog {        
+      &.modal--m .modal__dialog {
          transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
       }
    }
@@ -1069,9 +1064,9 @@ header {
          flex-grow: 1;
          overflow: auto;
          & .modal__video {
-            position: relative;            
+            position: relative;
             aspect-ratio: 16 / 9;
-            min-height: 40vh;           
+            min-height: 40vh;
             & video {
                object-fit: cover;
                position: absolute;
