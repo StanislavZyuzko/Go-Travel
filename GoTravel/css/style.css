@@ -883,6 +883,8 @@ header {
 }
 
 .modal--m .modal__dialog {
+  visibility: hidden;
+  opacity: 0;
   width: 600px;
   -webkit-transition: 0.8s;
   -o-transition: 0.8s;
@@ -897,6 +899,8 @@ header {
 }
 
 .modal--active.modal--m .modal__dialog {
+  visibility: visible;
+  opacity: 1;
   -webkit-transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
           transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
 }
