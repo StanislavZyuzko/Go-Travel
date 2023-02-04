@@ -887,8 +887,8 @@ header {
   -webkit-transition: 0.8s;
   -o-transition: 0.8s;
   transition: 0.8s;
-  -webkit-transform: perspective(600px) translate(0px, -300%) rotateX(45deg);
-          transform: perspective(600px) translate(0px, -300%) rotateX(45deg);
+  -webkit-transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+          transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
 }
 
 .modal--active {
