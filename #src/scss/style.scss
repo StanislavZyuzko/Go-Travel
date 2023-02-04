@@ -786,6 +786,7 @@ header {
 
 .customers__main-img img {
    position: absolute;
+   border-radius: 35px;;
    width: 85%;
    height: 85%;
    object-fit: contain;
@@ -929,6 +930,7 @@ header {
    }
    @media (max-width: 670px) {
       margin: -10px 0 10px;
+
    }
    @media (max-width: 600px) {
       font-size: 30px;

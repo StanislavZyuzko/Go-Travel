@@ -688,6 +688,7 @@ header {
 
 .customers__main-img img {
   position: absolute;
+  border-radius: 35px;
   width: 85%;
   height: 85%;
   -o-object-fit: contain;
