@@ -99,6 +99,7 @@ h6 {
 body {
   background-color: #e5e5e5;
   color: #0f1f1c;
+  -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 
 .wrapper {
@@ -687,8 +688,8 @@ header {
 }
 
 .customers__main-img img {
-  position: absolute;
   border-radius: 35px;
+  position: absolute;
   width: 85%;
   height: 85%;
   -o-object-fit: contain;
