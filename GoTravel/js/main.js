@@ -141,11 +141,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   OpenVideoModal('video-open', 'data-video-url');
 });
 
-window.onload = function(event) { 
- 
-  event.preventDefault();
-  
-};;
+;
 const imageSlider = new Swiper('.swiper', {
   navigation: {
     nextEl: '.swiper-button-next',
