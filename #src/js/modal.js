@@ -74,6 +74,7 @@ function OpenVideoModal(htmlId, htmlDataAttr) {
   });
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', (event) => {
+  event.preventDefault();
   OpenVideoModal('video-open', 'data-video-url');
 });
