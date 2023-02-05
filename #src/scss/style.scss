@@ -355,25 +355,16 @@ header {
    }
 }
 
+.disable-scroll,
 .stop-scroll {
-   // overflow: hidden !important;
+   overflow: hidden;
+   // for Safari-lock
    position: relative;
-	overflow: hidden;
-	height: 100vh;
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100%;
-}
-
-.disable-scroll {
-   position: relative;
-	overflow: hidden;
-	height: 100vh;
-	position: fixed;
-	left: 0;
-	top: 0;
-	width: 100%;
+   height: 100vh;
+   position: fixed;
+   left: 0;
+   top: 0;
+   width: 100%;
 }
 
 .header-menu__list {
