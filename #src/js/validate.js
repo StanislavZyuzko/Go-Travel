@@ -1,4 +1,4 @@
-const { forms } = document;
+/* const { forms } = document;
 
 const checkPasswordsIdentity = (e, matchValue) => {
   const signupPswForms = e.currentTarget.querySelectorAll("[type='password']");
@@ -234,3 +234,26 @@ subscribeValidate
   .onSuccess((event) => {
     setSuccess(event);
   });
+ */
+
+const subscribeForm = document.forms.subscribeform;
+const subscribeInput = subscribeForm.subscribemail;
+const mask = "hey";
+
+// let contactFlag = false;
+
+subscribeForm.addEventListener("input", () => {
+
+  let value = subscribeInput.value;
+  //  contactFlag = true;
+   if (!value) {
+      console.log("field is requred");
+   }
+
+   if (value === mask) {
+    console.log('succsess')
+   } else if (value) {
+    console.log('make properly')
+   }
+
+});
