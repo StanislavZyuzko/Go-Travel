@@ -73,13 +73,17 @@ const paddingOffset = window.innerWidth - document.body.offsetWidth;
 
 const hideScroll = () => {
   document.body.style.paddingRight = `${paddingOffset}px`;
-  document.body.style.overflow = 'hidden';
+  // document.body.style.overflow = 'hidden';
+  document.body.classList.add('disable-scroll');
+
 };
 
 const showScroll = (event) => {
   if (event.propertyName === 'transform') {
     document.body.style.paddingRight = '';
-    document.body.style.overflow = 'visible';
+    // document.body.style.overflow = 'visible';
+    document.body.classList.remove('disable-scroll');
+
 
     event.target
       .closest(`.${CLASS_LIST.MODAL}`)
