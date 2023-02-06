@@ -238,8 +238,8 @@ subscribeValidate
 
 const subscribeForm = document.forms.subscribeform;
 const subscribeInput = subscribeForm.subscribemail;
- const subscribeButton = subscribeForm.subscribesubmit;
- console.log(subscribeButton);
+const subscribeButton = subscribeForm.subscribesubmit;
+console.log(subscribeButton);
 // const mask = "hey";
 // не маск а регулярное выражение
 const mask = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/;
@@ -248,27 +248,28 @@ const mask = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/;
 
 // subscribeInput.style.border = '2px solid red';
 
+function getError(message) {
+   subscribeInput.style.border = "2px solid red";
+   subscribeButton.disabled = true;
+   console.log(message);
+}
+
+function getValid(message) {
+   subscribeInput.style.border = "2px solid green";
+   subscribeButton.disabled = false;
+   console.log(message);
+}
+
 subscribeForm.addEventListener("input", () => {
-
-  let value = subscribeInput.value;
-  //  contactFlag = true;
+   let value = subscribeInput.value;
    if (!value) {
-    // удалить сообщение заполни правильно, тк оно не может не быть
-      console.log("field is requred");
-      subscribeInput.style.border = '2px solid red';
-      subscribeButton.disabled = true;
-
+      getError("field is requred");
    }
 
    if (mask.test(value)) {
-    console.log('succsess')
-    subscribeInput.style.border = '2px solid green';
-    subscribeButton.disabled = false;
-
+      getValid("succsess")
+    
    } else if (value) {
-    console.log('make properly')
-    subscribeInput.style.border = '2px solid red';
-    subscribeButton.disabled = true;
+      getError("make properly");
    }
-
 });
