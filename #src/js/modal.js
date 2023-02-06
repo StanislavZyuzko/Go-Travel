@@ -83,3 +83,25 @@ document.addEventListener('DOMContentLoaded', (event) => {
   OpenVideoModal('video-open', 'data-video-url');
 });
 
+const testModal = document.querySelector('.modal__video');
+console.log(testModal);
+
+document.addEventListener('DOMContentLoaded', (event) => {
+  event.preventDefault();
+
+  
+});
+
+
+
+if (document.readyState == 'loading') {
+  testModal.style.visibility = 'hidden';
+
+} 
+
+window.onload = () => {
+  // testModal.style.color = 'green';
+  testModal.style.visibility = 'visible';
+
+}
+
