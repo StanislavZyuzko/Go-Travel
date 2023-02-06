@@ -1019,10 +1019,9 @@ header {
    transition: 0.8s;
    overflow: auto;
    &--m &__dialog {
+      display: none;
       width: 600px;
-      // transition: 0.8s;
-      transition: 0.05s;
-
+      transition: 0.8s;
       transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
    }
    &--active {
@@ -1032,8 +1031,7 @@ header {
          z-index: 2500;
       }
       &.modal--m .modal__dialog {
-         transition: 0.8s;
-
+         display: block;
          transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
       }
    }

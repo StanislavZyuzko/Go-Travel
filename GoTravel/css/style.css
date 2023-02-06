@@ -891,10 +891,11 @@ header {
 }
 
 .modal--m .modal__dialog {
+  display: none;
   width: 600px;
-  -webkit-transition: 0.05s;
-  -o-transition: 0.05s;
-  transition: 0.05s;
+  -webkit-transition: 0.8s;
+  -o-transition: 0.8s;
+  transition: 0.8s;
   -webkit-transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
           transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
 }
@@ -905,9 +906,7 @@ header {
 }
 
 .modal--active.modal--m .modal__dialog {
-  -webkit-transition: 0.8s;
-  -o-transition: 0.8s;
-  transition: 0.8s;
+  display: block;
   -webkit-transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
           transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
 }
