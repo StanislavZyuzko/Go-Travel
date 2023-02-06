@@ -1,110 +1,90 @@
 const CLASS_LIST = {
-  MODAL: 'modal',
-  MODAL_ACTIVE: 'modal--active',
-  MODAL_HAS_SCROLL: 'modal--has-scroll',
-  MODAL_DIALOG_BODY: 'modal__dialog-body',
-  TRIGGER_OPEN: 'modal__open',
-  TRIGGER_CLOSE: 'modal__close',
+   MODAL: "modal",
+   MODAL_ACTIVE: "modal--active",
+   MODAL_HAS_SCROLL: "modal--has-scroll",
+   MODAL_DIALOG_BODY: "modal__dialog-body",
+   TRIGGER_OPEN: "modal__open",
+   TRIGGER_CLOSE: "modal__close",
 };
 
 const paddingOffset = window.innerWidth - document.body.offsetWidth;
 
 const hideScroll = () => {
-  document.body.style.paddingRight = `${paddingOffset}px`;
-  // document.body.style.overflow = 'hidden';
-  document.body.classList.add('disable-scroll');
-
+   document.body.style.paddingRight = `${paddingOffset}px`;
+   // document.body.style.overflow = 'hidden';
+   document.body.classList.add("disable-scroll");
 };
 
 const showScroll = (event) => {
-  if (event.propertyName === 'transform') {
-    document.body.style.paddingRight = '';
-    // document.body.style.overflow = 'visible';
-    document.body.classList.remove('disable-scroll');
+   if (event.propertyName === "transform") {
+      document.body.style.paddingRight = "";
+      // document.body.style.overflow = 'visible';
+      document.body.classList.remove("disable-scroll");
 
-
-    event.target
-      .closest(`.${CLASS_LIST.MODAL}`)
-      .removeEventListener('transitionend', showScroll);
-  }
+      event.target
+         .closest(`.${CLASS_LIST.MODAL}`)
+         .removeEventListener("transitionend", showScroll);
+   }
 };
 
-document.addEventListener('click', (event) => {
-  if (event.target.closest(`.${CLASS_LIST.TRIGGER_OPEN}`)) {
-    event.preventDefault();
+document.addEventListener("click", (event) => {
+   if (event.target.closest(`.${CLASS_LIST.TRIGGER_OPEN}`)) {
+      event.preventDefault();
 
-    const target = event.target.closest(`.${CLASS_LIST.TRIGGER_OPEN}`);
-    const modalId = target.getAttribute('href').replace('#', '');
-    const modal = document.getElementById(modalId);
+      const target = event.target.closest(`.${CLASS_LIST.TRIGGER_OPEN}`);
+      const modalId = target.getAttribute("href").replace("#", "");
+      const modal = document.getElementById(modalId);
 
-    hideScroll();
+      hideScroll();
 
-    modal.classList.add(CLASS_LIST.MODAL_ACTIVE);
-  }
+      modal.classList.add(CLASS_LIST.MODAL_ACTIVE);
+   }
 
-  if (
-    event.target.closest(`.${CLASS_LIST.TRIGGER_CLOSE}`)
-      || event.target.classList.contains(CLASS_LIST.MODAL_ACTIVE)
-  ) {
-    event.preventDefault();
+   if (
+      event.target.closest(`.${CLASS_LIST.TRIGGER_CLOSE}`) ||
+      event.target.classList.contains(CLASS_LIST.MODAL_ACTIVE)
+   ) {
+      event.preventDefault();
 
-    const modal = event.target.closest(`.${CLASS_LIST.MODAL}`);
-    modal.classList.remove(CLASS_LIST.MODAL_ACTIVE);
-    modal.addEventListener('transitionend', showScroll);
-  }
+      const modal = event.target.closest(`.${CLASS_LIST.MODAL}`);
+      modal.classList.remove(CLASS_LIST.MODAL_ACTIVE);
+      modal.addEventListener("transitionend", showScroll);
+   }
 });
 
 // Modal video
 
 function OpenVideoModal(htmlId, htmlDataAttr) {
-  const videoModalOpen = document.getElementById(htmlId);
-  const videoUrl = videoModalOpen.getAttribute(htmlDataAttr);
+   const videoModalOpen = document.getElementById(htmlId);
+   const videoUrl = videoModalOpen.getAttribute(htmlDataAttr);
 
-  let frame;
+   let frame;
 
-  videoModalOpen.addEventListener('click', () => {
-    frame = document.querySelector('.modal__video video');
-    frame.src = videoUrl;
-  });
+   videoModalOpen.addEventListener("click", () => {
+      frame = document.querySelector(".modal__video video");
+      frame.src = videoUrl;
+   });
 
-  document.addEventListener('click', (event) => {
-    if (
-      event.target.closest('.modal__close--video')
-         || event.target.classList.contains('modal--video')
-    ) {
-      event.preventDefault();
-      frame.src = ' ';
-    }
-  });
+   document.addEventListener("click", (event) => {
+      if (
+         event.target.closest(".modal__close--video") ||
+         event.target.classList.contains("modal--video")
+      ) {
+         event.preventDefault();
+         frame.src = " ";
+      }
+   });
 }
 
-document.addEventListener('DOMContentLoaded', (event) => {
-  event.preventDefault();
-  OpenVideoModal('video-open', 'data-video-url');
+const videoModalDialog = document.querySelector(".modal__dialog--video");
+
+document.addEventListener("DOMContentLoaded", (event) => {
+   event.preventDefault();
+   OpenVideoModal("video-open", "data-video-url");
+
+   // to display correctly in Safari
+   const getVisible = () => {
+      videoModalDialog.style.display = "block";
+   };
+   setTimeout(getVisible, 1000);
 });
-
-const testModal = document.querySelector('.modal__dialog--video');
-console.log(testModal);
-
-function getVisible(){
-  testModal.style.display = 'block';
-}
-
-document.addEventListener('DOMContentLoaded', (event) => {
-  event.preventDefault();
-  setTimeout(getVisible, 1000);
-});
-
-
-
-
-if (document.readyState == 'complete') {
-
-} 
-
-window.onload = () => {
-  // testModal.style.color = 'green';
-  // testModal.style.visibility = 'visible';
-
-}
-
