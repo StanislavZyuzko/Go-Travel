@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   OpenVideoModal('video-open', 'data-video-url');
 });
 
-const testModal = document.querySelector('.modal__video');
+const testModal = document.querySelector('.modal__dialog--video');
 console.log(testModal);
 
 document.addEventListener('DOMContentLoaded', (event) => {
