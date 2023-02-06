@@ -362,10 +362,10 @@ header {
 .disable-scroll,
 .stop-scroll {
   overflow: hidden;
-  height: 100vh;
   position: fixed;
   left: 0;
   top: 0;
+  height: 100vh;
   width: 100%;
 }
 
@@ -850,7 +850,7 @@ header {
 }
 
 .subscribe__email:focus {
-  border: 1px solid gray;
+  border: 2px solid gray;
   border-radius: 8px;
 }
 

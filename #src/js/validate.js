@@ -242,18 +242,27 @@ const mask = "hey";
 
 // let contactFlag = false;
 
+// subscribeInput.style.border = '2px solid red';
+
 subscribeForm.addEventListener("input", () => {
 
   let value = subscribeInput.value;
   //  contactFlag = true;
    if (!value) {
+    // удалить сообщение заполни правильно, тк оно не может не быть
       console.log("field is requred");
+      subscribeInput.style.border = '2px solid red';
+
    }
 
    if (value === mask) {
     console.log('succsess')
+    subscribeInput.style.border = '2px solid green';
+
    } else if (value) {
     console.log('make properly')
+    subscribeInput.style.border = '2px solid red';
+
    }
 
 });
