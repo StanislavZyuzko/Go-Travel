@@ -925,6 +925,7 @@ header {
 
 .modal__dialog--video {
   background-color: transparent;
+  display: none;
 }
 
 .modal__dialog-header {

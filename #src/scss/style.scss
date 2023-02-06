@@ -1038,6 +1038,7 @@ header {
       overflow: hidden;
       &--video {
          background-color: transparent;
+         display: none;
       }
       background-color: #fff;
       display: flex;
