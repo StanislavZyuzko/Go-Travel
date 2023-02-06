@@ -89,13 +89,13 @@ console.log(testModal);
 document.addEventListener('DOMContentLoaded', (event) => {
   event.preventDefault();
 
-  
+  testModal.style.display = 'block';
 });
 
 
 
+
 if (document.readyState == 'complete') {
-  testModal.style.display = 'block';
 
 } 
 
