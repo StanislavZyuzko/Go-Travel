@@ -1032,6 +1032,7 @@ header {
       }
       &.modal--m .modal__dialog {
          display: block;
+         transition: 0.8s;
          transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
       }
    }
