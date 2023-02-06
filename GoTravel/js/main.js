@@ -163,7 +163,7 @@ if (document.readyState == 'loading') {
 
 window.onload = () => {
   // testModal.style.color = 'green';
-  testModal.style.visibility = 'visible';
+  // testModal.style.visibility = 'visible';
 
 }
 
