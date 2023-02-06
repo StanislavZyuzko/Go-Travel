@@ -864,6 +864,19 @@ header {
   border-radius: 8px;
 }
 
+.subscribe__valid {
+  padding-left: 10px;
+  font-size: 20px;
+}
+
+.subscribe__valid--error {
+  color: rgb(184, 17, 17);
+}
+
+.subscribe__valid--success {
+  color: green;
+}
+
 .modal {
   position: fixed;
   top: 0;

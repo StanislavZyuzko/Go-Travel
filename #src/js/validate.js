@@ -239,7 +239,32 @@ subscribeValidate
 const subscribeForm = document.forms.subscribeform;
 const subscribeInput = subscribeForm.subscribemail;
 const subscribeButton = subscribeForm.subscribesubmit;
-console.log(subscribeButton);
+
+function getValidMessage(message, callback, className) {
+  const delMessage = subscribeForm.querySelector('.subscribe__valid');
+  if(delMessage) {
+    delMessage.remove();
+  }
+  // console.log(delMessage);
+  let div = document.createElement('div');
+  div.classList = `subscribe__valid  ${className}`;
+  div.innerHTML = message;
+  subscribeInput.before(div);
+
+  callback();
+}
+
+const errorClass = 'subscribe__valid--error';
+const validClass = 'subscribe__valid--success'
+
+// getValidMessage("Вы прочитали важное", getValid, validClass);
+
+// let div = document.createElement('div');
+// div.classList = "subscribe__valid  subscribe__valid--error";
+// div.innerHTML = "Вы прочитали важное";
+// subscribeInput.before(div);
+
+
 // const mask = "hey";
 // не маск а регулярное выражение
 const mask = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/;
@@ -248,28 +273,34 @@ const mask = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/;
 
 // subscribeInput.style.border = '2px solid red';
 
-function getError(message) {
+function getError() {
    subscribeInput.style.border = "2px solid red";
    subscribeButton.disabled = true;
-   console.log(message);
+  //  console.log(message);
 }
 
-function getValid(message) {
+function getValid() {
    subscribeInput.style.border = "2px solid green";
    subscribeButton.disabled = false;
-   console.log(message);
+  //  console.log(message);
 }
 
 subscribeForm.addEventListener("input", () => {
    let value = subscribeInput.value;
    if (!value) {
-      getError("field is requred");
+      // getError("field is requred");
+      getValidMessage("field is requred", getError, errorClass);
+
    }
 
    if (mask.test(value)) {
-      getValid("succsess")
+      // getValid("succsess")
+      getValidMessage("succsess!", getValid, validClass);
+
     
    } else if (value) {
-      getError("make properly");
+      // getError("make properly");
+      getValidMessage("make properly", getError, errorClass);
+
    }
 });

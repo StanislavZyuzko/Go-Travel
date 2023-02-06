@@ -1000,6 +1000,19 @@ header {
    }
 }
 
+
+.subscribe__valid {
+   padding-left: 10px;   
+   font-size: 20px;
+   &--error {
+      color: rgb(184, 17, 17);
+   }
+   &--success {
+      color: green;
+   }
+ }
+ 
+
 // Modal
 
 .modal {
