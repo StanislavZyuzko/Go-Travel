@@ -362,7 +362,6 @@ header {
 .disable-scroll,
 .stop-scroll {
   overflow: hidden;
-  position: relative;
   height: 100vh;
   position: fixed;
   left: 0;

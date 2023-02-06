@@ -10,8 +10,9 @@ const CLASS_LIST = {
 const paddingOffset = window.innerWidth - document.body.offsetWidth;
 
 const hideScroll = () => {
-  document.body.style.paddingRight = `${paddingOffset}px`;
+   document.body.style.paddingRight = `${paddingOffset}px`;
 
+   // to display correctly in Safari
    let pagePosition = window.scrollY;
    document.body.classList.add("disable-scroll");
    document.body.style.top = -pagePosition + "px";
@@ -20,8 +21,9 @@ const hideScroll = () => {
 
 const showScroll = (event) => {
    if (event.propertyName === "transform") {
-    document.body.style.paddingRight = "";
-    
+      document.body.style.paddingRight = "";
+
+      // to display correctly in Safari
       let pagePosition = parseInt(document.body.dataset.position, 10);
       document.body.classList.remove("disable-scroll");
       document.body.style.top = "auto";
