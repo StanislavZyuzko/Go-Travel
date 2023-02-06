@@ -1020,8 +1020,10 @@ header {
    overflow: auto;
    &--m &__dialog {
       width: 600px;
-      transition: 0.8s;
-      transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+      // transition: 0.8s;
+      // transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+      transition: 0.1s;
+      transform: scale(0);
    }
    &--active {
       visibility: visible;
@@ -1030,7 +1032,10 @@ header {
          z-index: 2500;
       }
       &.modal--m .modal__dialog {
-         transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+         // transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+               transition: 0.8s;
+         transform: scale(1);
+
       }
    }
    &__dialog {
