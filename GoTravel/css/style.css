@@ -903,6 +903,9 @@ header {
 .modal--active {
   visibility: visible;
   opacity: 1;
+  -webkit-transition: 0.8s;
+  -o-transition: 0.8s;
+  transition: 0.8s;
 }
 
 .modal--active.modal--m .modal__dialog {

@@ -1027,6 +1027,8 @@ header {
    &--active {
       visibility: visible;
       opacity: 1;
+      transition: 0.8s;
+
       @media (max-width: 820px) {
          z-index: 2500;
       }
