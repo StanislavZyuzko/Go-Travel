@@ -72,16 +72,23 @@ const CLASS_LIST = {
 const paddingOffset = window.innerWidth - document.body.offsetWidth;
 
 const hideScroll = () => {
-   document.body.style.paddingRight = `${paddingOffset}px`;
-   // document.body.style.overflow = 'hidden';
+  document.body.style.paddingRight = `${paddingOffset}px`;
+
+   let pagePosition = window.scrollY;
    document.body.classList.add("disable-scroll");
+   document.body.style.top = -pagePosition + "px";
+   document.body.dataset.position = pagePosition;
 };
 
 const showScroll = (event) => {
    if (event.propertyName === "transform") {
-      document.body.style.paddingRight = "";
-      // document.body.style.overflow = 'visible';
+    document.body.style.paddingRight = "";
+    
+      let pagePosition = parseInt(document.body.dataset.position, 10);
       document.body.classList.remove("disable-scroll");
+      document.body.style.top = "auto";
+      window.scroll({ top: pagePosition, left: 0 });
+      document.body.removeAttribute("data-position");
 
       event.target
          .closest(`.${CLASS_LIST.MODAL}`)
