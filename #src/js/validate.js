@@ -238,7 +238,9 @@ subscribeValidate
 
 const subscribeForm = document.forms.subscribeform;
 const subscribeInput = subscribeForm.subscribemail;
-const mask = "hey";
+// const mask = "hey";
+const mask = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/;
+
 
 // let contactFlag = false;
 
@@ -255,7 +257,7 @@ subscribeForm.addEventListener("input", () => {
 
    }
 
-   if (value === mask) {
+   if (mask.test(value)) {
     console.log('succsess')
     subscribeInput.style.border = '2px solid green';
 
