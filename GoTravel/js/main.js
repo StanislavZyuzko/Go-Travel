@@ -156,8 +156,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
 
 
-if (document.readyState == 'loading') {
-  testModal.style.visibility = 'hidden';
+if (document.readyState == 'complete') {
+  testModal.style.display = 'block';
 
 } 
 
