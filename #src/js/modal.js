@@ -86,10 +86,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
 const testModal = document.querySelector('.modal__dialog--video');
 console.log(testModal);
 
+function getVisible(){
+  testModal.style.display = 'block';
+}
+
 document.addEventListener('DOMContentLoaded', (event) => {
   event.preventDefault();
-
-  testModal.style.display = 'block';
+  setTimeout(getVisible, 1000);
 });
 
 
