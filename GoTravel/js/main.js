@@ -439,9 +439,11 @@ subscribeValidate
 
 const subscribeForm = document.forms.subscribeform;
 const subscribeInput = subscribeForm.subscribemail;
+ const subscribeButton = subscribeForm.subscribesubmit;
+ console.log(subscribeButton);
 // const mask = "hey";
+// не маск а регулярное выражение
 const mask = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/;
-
 
 // let contactFlag = false;
 
@@ -455,17 +457,19 @@ subscribeForm.addEventListener("input", () => {
     // удалить сообщение заполни правильно, тк оно не может не быть
       console.log("field is requred");
       subscribeInput.style.border = '2px solid red';
+      subscribeButton.disabled = true;
 
    }
 
    if (mask.test(value)) {
     console.log('succsess')
     subscribeInput.style.border = '2px solid green';
+    subscribeButton.disabled = false;
 
    } else if (value) {
     console.log('make properly')
     subscribeInput.style.border = '2px solid red';
-
+    subscribeButton.disabled = true;
    }
 
 });
