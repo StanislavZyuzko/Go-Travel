@@ -867,6 +867,7 @@ header {
 .subscribe__valid {
   padding-left: 10px;
   font-size: 20px;
+  border-radius: 30px;
 }
 
 .subscribe__valid--error {
