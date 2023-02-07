@@ -847,11 +847,11 @@ header {
   opacity: 0.5;
   padding-left: 10px;
   width: 350px;
+  border-radius: 8px;
 }
 
 .subscribe__email:focus {
   border: 2px solid gray;
-  border-radius: 8px;
 }
 
 .subscribe__email.just-validate-error-field {
@@ -867,7 +867,6 @@ header {
 .subscribe__valid {
   padding-left: 10px;
   font-size: 20px;
-  border-radius: 30px;
 }
 
 .subscribe__valid--error {

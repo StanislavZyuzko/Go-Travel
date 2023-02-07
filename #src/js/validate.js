@@ -241,17 +241,17 @@ const subscribeInput = subscribeForm.subscribemail;
 const subscribeButton = subscribeForm.subscribesubmit;
 const mailRegExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/;
 
-function getError() {
+const getError = () => {
    subscribeInput.style.border = "2px solid red";
    subscribeButton.disabled = true;
 }
 
-function getValid() {
+const getValid =() => {
    subscribeInput.style.border = "2px solid green";
    subscribeButton.disabled = false;
 }
 
-function getValidMessage(message, callback) {
+const getValidMessage = (message, callback) => {
    const delMessage = subscribeForm.querySelector(".subscribe__valid");
    if (delMessage) {
       delMessage.remove();
