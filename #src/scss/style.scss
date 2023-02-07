@@ -1000,9 +1000,8 @@ header {
    }
 }
 
-
 .subscribe__valid {
-   padding-left: 10px;   
+   padding-left: 10px;
    font-size: 20px;
    &--error {
       color: rgb(184, 17, 17);
@@ -1010,8 +1009,7 @@ header {
    &--success {
       color: green;
    }
- }
- 
+}
 
 // Modal
 

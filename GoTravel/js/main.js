@@ -248,6 +248,11 @@ subscribeForm.addEventListener('input', () => {
     getValidMessage('Enter correct e-mail', getError);
   }
 });
+
+subscribeForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  location.reload();
+});
 ;
 
 
