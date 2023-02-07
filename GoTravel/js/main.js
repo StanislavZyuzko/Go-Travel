@@ -445,12 +445,12 @@ const mailRegExp = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/;
 const getError = () => {
    subscribeInput.style.border = "2px solid red";
    subscribeButton.disabled = true;
-}
+};
 
-const getValid =() => {
+const getValid = () => {
    subscribeInput.style.border = "2px solid green";
    subscribeButton.disabled = false;
-}
+};
 
 const getValidMessage = (message, callback) => {
    const delMessage = subscribeForm.querySelector(".subscribe__valid");
@@ -472,10 +472,10 @@ const getValidMessage = (message, callback) => {
    subscribeInput.before(messageDiv);
 
    callback();
-}
+};
 
 subscribeForm.addEventListener("input", () => {
-   const value = subscribeInput.value;
+   const { value } = subscribeInput;
    if (!value) {
       getValidMessage("E-mail is required", getError);
    }
@@ -486,6 +486,7 @@ subscribeForm.addEventListener("input", () => {
       getValidMessage("Enter correct e-mail", getError);
    }
 });
+
 
 ;
 
