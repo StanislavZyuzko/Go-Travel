@@ -779,7 +779,9 @@ header {
 .customers__container {
    display: flex;
    @media (max-width: 670px) {
-      flex-direction: column-reverse;
+      // flex-direction: column-reverse;
+      flex-direction: column;
+
    }
 }
 
