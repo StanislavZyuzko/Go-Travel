@@ -970,6 +970,10 @@ header {
    }
 }
 
+.subscribe__input-label {
+   position: relative;
+}
+
 .subscribe__email {
    font-weight: 500;
    font-size: 24px;
@@ -1003,6 +1007,10 @@ header {
 .subscribe__valid {
    padding-left: 10px;
    font-size: 20px;
+   position: absolute;
+   top: -25px;
+   left: 0;
+   
    &--error {
       color: rgb(184, 17, 17);
    }
