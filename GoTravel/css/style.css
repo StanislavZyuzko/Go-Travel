@@ -1326,7 +1326,7 @@ header {
 
   button.login__sign-up-btn {
     padding-right: 12px;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
   }
 
   button.login__login-btn {
@@ -1401,7 +1401,7 @@ header {
 
   .header-menu__link {
     margin-right: 0px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 
   .header__login-inner {
