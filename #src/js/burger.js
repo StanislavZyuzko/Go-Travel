@@ -1,7 +1,7 @@
 const { body } = document;
 const menu = document.querySelector('.header__menu-body');
 const burger = document.querySelector('.burger');
-const menuLinks = menu.querySelectorAll('a');
+// const menuLinks = menu.querySelectorAll('a');
 
 const closeLink = () => {
   body.classList.toggle('disable-scroll');
@@ -10,6 +10,7 @@ const closeLink = () => {
 };
 
 burger.addEventListener('click', closeLink);
-menuLinks.forEach((elem) => {
-  elem.addEventListener('click', closeLink);
-});
+
+// menuLinks.forEach((elem) => {
+//   elem.addEventListener('click', closeLink);
+// });
