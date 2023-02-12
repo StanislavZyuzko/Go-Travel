@@ -5,7 +5,6 @@
 @@include('modal.js');
 @@include('swiper.js');
 @@include('rating.js');
-@@include('libraries/just-validate.min.js');
 @@include('validate.js');
 
 

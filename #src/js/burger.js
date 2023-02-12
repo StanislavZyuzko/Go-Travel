@@ -1,4 +1,5 @@
 const { body } = document;
+console.log('testConnect');
 const menu = document.querySelector('.header__menu-body');
 const burger = document.querySelector('.burger');
 
