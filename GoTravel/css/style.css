@@ -359,8 +359,7 @@ header {
           flex: 1;
 }
 
-.disable-scroll,
-.stop-scroll {
+.disable-scroll {
   overflow: hidden;
   position: fixed;
   left: 0;
@@ -397,10 +396,6 @@ header {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
-}
-
-.header-menu__link:hover::after {
-  width: 35px;
 }
 
 .header-menu__link a {
@@ -852,16 +847,6 @@ header {
   border: 2px solid gray;
 }
 
-.subscribe__email.just-validate-error-field {
-  border: 1px solid rgb(184, 17, 17) !important;
-  border-radius: 8px;
-}
-
-.subscribe__email.just-validate-success-field {
-  border: 1px solid green;
-  border-radius: 8px;
-}
-
 .subscribe__valid {
   padding-left: 10px;
   font-size: 20px;
@@ -1036,218 +1021,168 @@ header {
   color: #fff;
 }
 
-.modal--s.modal--active {
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
+/* .modal--s.modal--active {
+   transition: 0.5s;
+   & .modal {
+      &__dialog {
+         transform: scale(1);
+         transition: 0.5s;
+      }
+   }
+} */
 
-.modal--s.modal--active .modal__dialog {
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: 0.5s;
-  -o-transition: 0.5s;
-  transition: 0.5s;
-}
+/* .modal--s {
+   transition: 1ms;
+   & .modal {
+      &__close--icon {
+         color: black;
+         &:hover {
+            color: red;
+         }
+      }
+      &__dialog {
+         transition: 1ms;
+         transform: scale(0);
+         position: absolute;
+         z-index: 2;
+         width: 300px;
+         min-height: 350px;
+         background-color: white;
+         top: 50px;
+         right: 40px;
+         @media (max-width: 820px) {
+            right: 15px;
+            top: 45px;
+         }
+         &-header {
+            background-color: #fff;
+         }
 
-.modal--s {
-  -webkit-transition: 1ms;
-  -o-transition: 1ms;
-  transition: 1ms;
-}
+         &-body {
+            padding: 10px 10px;
+            font-size: 18px;
+            font-family: "Segoe UI", Arial, sans-serif;
+            & .login-form__inner {
+               display: flex;
+               flex-direction: column;
+               & .login-form__submit-login {
+                  letter-spacing: 0.5px;
+                  font-weight: bold;
+                  color: black;
+                  background-color: #ff7b4e;
+                  font-family: "Segoe UI", Arial, sans-serif;
+                  margin: 7px 8px;
+                  border-radius: 10px;
+                  padding: 15px;
+                  &:hover {
+                     background-color: #ff584e;
+                  }
+                  &:disabled {
+                     opacity: 0.5;
+                     cursor: default;
+                     pointer-events: none;
+                  }
+               }
+               & .login-form__label {
+                  overflow: visible;
+                  position: relative;
+                  display: flex;
+                  flex-direction: column-reverse;
+                  padding: 15px;
+               }
+               & .login-form__label:nth-child(4) {
+                  flex-direction: row;
+                  align-items: center;
+                  & input {
+                     margin: 0 7px -2px 0;
+                  }
+               }
 
-.modal--s .modal__close--icon {
-  color: black;
-}
+               & input {
+                  padding: 5px;
+                  margin: 8px 2px;
+                  font-size: 15px;
+                  border: solid 0.5px gray;
+                  border-radius: 3px;
+                  margin-left: -2px;
+                  &.just-validate-error-field {
+                     border: 1px solid rgb(184, 17, 17) !important;
+                  }
 
-.modal--s .modal__close--icon:hover {
-  color: red;
-}
+                  &.just-validate-success-field {
+                     border: 1px solid green;
+                  }
+               }
+            }
 
-.modal--s .modal__dialog {
-  -webkit-transition: 1ms;
-  -o-transition: 1ms;
-  transition: 1ms;
-  -webkit-transform: scale(0);
-      -ms-transform: scale(0);
-          transform: scale(0);
-  position: absolute;
-  z-index: 2;
-  width: 300px;
-  min-height: 350px;
-  background-color: white;
-  top: 50px;
-  right: 40px;
-}
+            & .login-form__inner-bottom {
+               display: flex;
+               justify-content: space-between;
+               align-items: center;
+               & button {
+                  font-weight: bold;
+                  &:hover {
+                     color: rgb(184, 24, 24);
+                  }
+               }
+               & a {
+                  text-decoration: underline;
+               }
+               & span {
+                  font-size: 18px;
+               }
+            }
+         }
+      }
+   }
+} */
 
-.modal--s .modal__dialog-header {
-  background-color: #fff;
-}
-
-.modal--s .modal__dialog-body {
-  padding: 10px 10px;
-  font-size: 18px;
-  font-family: "Segoe UI", Arial, sans-serif;
-}
-
-.modal--s .modal__dialog-body .login-form__inner {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.modal--s .modal__dialog-body .login-form__inner .login-form__submit-login {
-  letter-spacing: 0.5px;
-  font-weight: bold;
-  color: black;
-  background-color: #ff7b4e;
-  font-family: "Segoe UI", Arial, sans-serif;
-  margin: 7px 8px;
-  border-radius: 10px;
-  padding: 15px;
-}
-
-.modal--s .modal__dialog-body .login-form__inner .login-form__submit-login:hover {
-  background-color: #ff584e;
-}
-
-.modal--s .modal__dialog-body .login-form__inner .login-form__submit-login:disabled {
-  opacity: 0.5;
-  cursor: default;
-  pointer-events: none;
-}
-
-.modal--s .modal__dialog-body .login-form__inner .login-form__label {
-  overflow: visible;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: column-reverse;
-          flex-direction: column-reverse;
-  padding: 15px;
-}
-
-.modal--s .modal__dialog-body .login-form__inner .login-form__label:nth-child(4) {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.modal--s .modal__dialog-body .login-form__inner .login-form__label:nth-child(4) input {
-  margin: 0 7px -2px 0;
-}
-
-.modal--s .modal__dialog-body .login-form__inner input {
-  padding: 5px;
-  margin: 8px 2px;
-  font-size: 15px;
-  border: solid 0.5px gray;
-  border-radius: 3px;
-  margin-left: -2px;
-}
-
-.modal--s .modal__dialog-body .login-form__inner input.just-validate-error-field {
-  border: 1px solid rgb(184, 17, 17) !important;
-}
-
-.modal--s .modal__dialog-body .login-form__inner input.just-validate-success-field {
-  border: 1px solid green;
-}
-
-.modal--s .modal__dialog-body .login-form__inner-bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.modal--s .modal__dialog-body .login-form__inner-bottom button {
-  font-weight: bold;
-}
-
-.modal--s .modal__dialog-body .login-form__inner-bottom button:hover {
-  color: rgb(184, 24, 24);
-}
-
-.modal--s .modal__dialog-body .login-form__inner-bottom a {
-  text-decoration: underline;
-}
-
-.modal--s .modal__dialog-body .login-form__inner-bottom span {
-  font-size: 18px;
-}
-
-.modal--s.modal--sign-up .modal__dialog {
-  top: 50px;
-  width: 300px;
-  min-height: 463px;
-}
-
-.modal--s.modal--sign-up .modal__dialog p {
-  padding: 5px 3px 0;
-  font-size: 15px;
-  margin-bottom: 12px;
-}
-
-.modal--s.modal--sign-up .modal__dialog .login-form__inner-bottom {
-  padding: 10px 0;
-}
-
-.modal--s.modal--sign-up .modal__dialog .login-form__inner-bottom button {
-  font-size: 15px;
-  font-family: "Segoe UI", Arial, sans-serif;
-  padding: 10px;
-  color: white;
-  border-radius: 3px;
-}
-
-.modal--s.modal--sign-up .modal__dialog .login-form__inner-bottom button.login-form__submit-sign-up {
-  background-color: #579344;
-}
-
-.modal--s.modal--sign-up .modal__dialog .login-form__inner-bottom button.login-form__submit-sign-up:disabled {
-  opacity: 0.6;
-  pointer-events: none;
-  cursor: default;
-}
-
-.modal--s.modal--sign-up .modal__dialog .login-form__inner-bottom button.login-form__submit-sign-up:hover {
-  background-color: #4caf50;
-}
-
-.modal--s.modal--sign-up .modal__dialog .login-form__inner-bottom button.modal__close--button {
-  background-color: #ff7b4e;
-  color: black;
-}
-
-.modal--s.modal--sign-up .modal__dialog .login-form__inner-bottom button.modal__close--button:hover {
-  background-color: #f44336;
-}
-
-.just-validate-error-label {
-  position: absolute;
-  top: -9px;
-  padding-bottom: 5px;
-  font-size: 15px;
-  color: rgb(184, 17, 17);
-}
+/* .modal--s.modal--sign-up {
+   & .modal {
+      &__dialog {
+         top: 50px;
+         width: 300px;
+         min-height: 463px;
+         @media (max-width: 820px) {
+            min-width: 280px;
+            top: 45px;
+         }
+         & p {
+            padding: 5px 3px 0;
+            font-size: 15px;
+            margin-bottom: 12px;
+         }
+         & .login-form__inner-bottom {
+            padding: 10px 0;
+            & button {
+               font-size: 15px;
+               font-family: "Segoe UI", Arial, sans-serif;
+               padding: 10px;
+               color: white;
+               border-radius: 3px;
+               &.login-form__submit-sign-up {
+                  background-color: #579344;
+                  &:disabled {
+                     opacity: 0.6;
+                     pointer-events: none;
+                     cursor: default;
+                  }
+                  &:hover {
+                     background-color: #4caf50;
+                  }
+               }
+               &.modal__close--button {
+                  background-color: #ff7b4e;
+                  color: black;
+                  &:hover {
+                     background-color: #f44336;
+                  }
+               }
+            }
+         }
+      }
+   }
+} */
 
 @media (min-width: 821px) {
   button.login__sign-up-btn:hover,
@@ -1257,6 +1192,10 @@ header {
     background: -o-linear-gradient(320.46deg, #ff7b4e 15.57%, #ff584e 95.03%);
     background: linear-gradient(129.54deg, #ff7b4e 15.57%, #ff584e 95.03%);
     border-radius: 100px;
+  }
+
+  .header-menu__link:hover::after {
+    width: 35px;
   }
 }
 
@@ -1487,16 +1426,6 @@ header {
 
   .modal--active {
     z-index: 2500;
-  }
-
-  .modal--s .modal__dialog {
-    right: 15px;
-    top: 45px;
-  }
-
-  .modal--s.modal--sign-up .modal__dialog {
-    min-width: 280px;
-    top: 45px;
   }
 }
 

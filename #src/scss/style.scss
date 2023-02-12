@@ -355,8 +355,7 @@ header {
    }
 }
 
-.disable-scroll,
-.stop-scroll {
+.disable-scroll {
    overflow: hidden;
    // to display correctly in Safari
    position: fixed;
@@ -396,11 +395,14 @@ header {
       border-radius: 100px;
       transition: 0.5s;
    }
-   &:hover {
-      &::after {
-         width: 35px;
+   @media(min-width: 821px) {
+      &:hover {
+         &::after {
+            width: 35px;
+         }
       }
    }
+   
 }
 
 .header-menu__link {
@@ -986,14 +988,14 @@ header {
    &:focus {
       border: 2px solid gray;
    }
-   &.just-validate-error-field {
-      border: 1px solid rgb(184, 17, 17) !important;
-      border-radius: 8px;
-   }
-   &.just-validate-success-field {
-      border: 1px solid green;
-      border-radius: 8px;
-   }
+   // &.just-validate-error-field {
+   //    border: 1px solid rgb(184, 17, 17) !important;
+   //    border-radius: 8px;
+   // }
+   // &.just-validate-success-field {
+   //    border: 1px solid green;
+   //    border-radius: 8px;
+   // }
    @media (max-width: 760px) {
       padding-left: 65px;
       margin-bottom: 15px;
@@ -1008,13 +1010,15 @@ header {
    }
 }
 
+// Validation
+
 .subscribe__valid {
    padding-left: 10px;
    font-size: 20px;
    position: absolute;
    top: -25px;
    left: 0;
-   
+
    &--error {
       color: rgb(184, 17, 17);
    }
@@ -1142,7 +1146,7 @@ header {
    color: #fff;
 }
 
-.modal--s.modal--active {
+/* .modal--s.modal--active {
    transition: 0.5s;
    & .modal {
       &__dialog {
@@ -1150,9 +1154,9 @@ header {
          transition: 0.5s;
       }
    }
-}
+} */
 
-.modal--s {
+/* .modal--s {
    transition: 1ms;
    & .modal {
       &__close--icon {
@@ -1256,9 +1260,9 @@ header {
          }
       }
    }
-}
+} */
 
-.modal--s.modal--sign-up {
+/* .modal--s.modal--sign-up {
    & .modal {
       &__dialog {
          top: 50px;
@@ -1303,14 +1307,14 @@ header {
          }
       }
    }
-}
+} */
 
 // Validation
 
-.just-validate-error-label {
-   position: absolute;
-   top: -9px;
-   padding-bottom: 5px;
-   font-size: 15px;
-   color: rgb(184, 17, 17);
-}
+// .just-validate-error-label {
+//    position: absolute;
+//    top: -9px;
+//    padding-bottom: 5px;
+//    font-size: 15px;
+//    color: rgb(184, 17, 17);
+// }
