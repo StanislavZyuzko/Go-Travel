@@ -410,6 +410,10 @@ header {
   position: relative;
 }
 
+.header__login-inner a {
+  color: #ffffff;
+}
+
 .login {
   display: -webkit-box;
   display: -ms-flexbox;
