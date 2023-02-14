@@ -2,30 +2,23 @@ const { body } = document;
 const menu = document.querySelector('.header__menu-body');
 const menuLinks = menu.querySelectorAll('a');
 const burger = document.querySelector('.burger');
-let burgerActive = false;
+let menuActive = false;
 
-const openLink = () => {
+const toggleMenu = () => {
   body.classList.toggle('disable-scroll');
   menu.classList.toggle('header__menu-body--visible');
   burger.classList.toggle('burger--active');
-  burgerActive = !burgerActive;
+  menuActive = !menuActive;
 };
 
-burger.addEventListener('click', () =>{
-  openLink();
-
-
+burger.addEventListener('click', () => {
+  toggleMenu();
 });
 
-menuLinks.forEach((element) => {
-  element.addEventListener('click', () => {
-    // const burgerActive = document.querySelector('.burger--active');
-    if (burgerActive) {
-      openLink();
+menuLinks.forEach((link) => {
+  link.addEventListener('click', () => {
+    if (menuActive) {
+      toggleMenu();
     }
   });
 });
-
-document.onclick = () => {
-console.log(burgerActive);
-}
