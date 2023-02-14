@@ -63,8 +63,14 @@ const openLink = () => {
 };
 
 burger.addEventListener('click', openLink);
+
 menuLinks.forEach((element) => {
-  element.addEventListener('click', openLink);
+  element.addEventListener('click', () => {
+    const burgerActive = document.querySelector('.burger--active');
+    if (burgerActive) {
+      openLink();
+    }
+  });
 });
 ;
 const CLASS_LIST = {

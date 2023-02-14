@@ -780,8 +780,6 @@ header {
    display: flex;
    @media (max-width: 670px) {
       flex-direction: column-reverse;
-      flex: 0 0 auto;
-
    }
 }
 
